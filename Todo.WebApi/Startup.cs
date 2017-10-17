@@ -51,8 +51,8 @@ namespace Todo.WebApi
             // Add framework services.
             services.AddDbContext<DataContext>(options =>
                 //options.UseSqlite("Data Source=c:\\mydb.db;Version=3;")
-                //options.UseInMemoryDatabase("TodoDB")
-                options.UseSqlServer(Configuration.GetConnectionString("TodoDB"))
+                options.UseInMemoryDatabase("TodoDB")
+                //options.UseSqlServer(Configuration.GetConnectionString("TodoDB"))
             );
 
             //services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -78,7 +78,7 @@ namespace Todo.WebApi
             
 
             app.UseSwagger();
-            app.UseMiddleware<ServiceMiddleware>();
+            //app.UseMiddleware<ServiceMiddleware>();
 
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.  
             app.UseSwaggerUI(c =>
