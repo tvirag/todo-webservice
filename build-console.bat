@@ -1,0 +1,1 @@
+docker build -t pixelbits/console -f dockerfile-console .

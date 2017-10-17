@@ -1,0 +1,1 @@
+docker build -t pixelbits/web -f dockerfile-web .

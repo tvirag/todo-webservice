@@ -1,0 +1,13 @@
+FROM microsoft/dotnet
+
+COPY . /Todo
+
+WORKDIR /Todo/Todo.WebApi
+
+RUN dotnet restore && dotnet publish -c Release
+
+WORKDIR /Todo/Todo.WebApi/bin/Release/netcoreapp2.0/publish
+
+EXPOSE 5000
+
+CMD ["dotnet", "Todo.WebApi.dll"]
